@@ -1,18 +1,17 @@
-// Add functionality to navigate to the selected section
 document
   .querySelector(".navbar-selector")
   .addEventListener("change", function () {
     const selectedValue = this.value;
     if (selectedValue) {
-      window.location.href = selectedValue; // Navigate to the selected section
+      window.location.href = selectedValue; 
     }
   });
   var typed = new Typed(".highlight", {
     strings: [
+      "Python Developer",
       "Software Developer",
       "Data Engineer",
-      "Python Developer",
-      "Django Developer",
+      "Backend Developer",
     ],
     typeSpeed: 100,  
     backSpeed: 50,   
