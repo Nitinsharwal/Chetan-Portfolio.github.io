@@ -209,6 +209,7 @@ body {
 }
 .profile-logo img:hover{
     transform: scale(1.05);
+    box-shadow: #ff0400;
 }
 
 .profile-pic img {
@@ -281,6 +282,14 @@ footer p{
 
     .hero-content {
         max-width: 100%;
+        display: contents;
+    }
+    .hero-content h1 {
+        margin: 5px;
+        font-size: 20px;
+    }
+    .hero-content {
+        max-width: 100%;
     }
     .hero-content:hover {
         transform: scale(1.10);
@@ -292,7 +301,19 @@ footer p{
     }
 
     .profile-pic {
-        margin-top: 1.5rem;
+        margin-top: -0.5rem;
+    }
+    .profile-pic img{
+        max-width: 120px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    .profile-logo img{
+        margin-bottom: -9rem;
+        max-width: 200px;
+        box-shadow: 0 4px 15px rgb(255, 3, 3);
+        transition: transform 0.3s ease;
     }
 
     .navbar ul {
@@ -369,18 +390,6 @@ footer p{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .profile-pic {
-        margin-top: 1.5rem;
-    }
 
     .navbar ul {
         flex-direction: column;
@@ -397,6 +406,7 @@ footer p{
     }
 
     .about-image {
+        display: none;
         margin-top: 1.5rem;
     }
 
@@ -415,7 +425,7 @@ footer p{
 
 .experience h1 {
     font-size: 2.5rem;
-    color: #2575fc;
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
@@ -506,9 +516,17 @@ footer p{
     }
 
     .timeline-card {
-        width: 90%;
+        width: 84%;
     }
 
+    .experience h1 {
+        font-size: 1.5rem;
+    }
+    .experience p{
+        margin-bottom: 2rem;
+        font-size: 0.8rem;
+        color: #ffffff;
+    }
     .timeline::before {
         left: 5%;
     }
@@ -548,7 +566,6 @@ footer p{
     animation: fadeInUp 1s ease-out;
 }
 
-/* Skills Category */
 .skills-category {
     margin-bottom: 4rem;
 }
@@ -573,7 +590,6 @@ footer p{
     transform: translateX(-50%);
 }
 
-/* Skills Containers */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -587,7 +603,7 @@ footer p{
     justify-content: center;
 }
 
-/* Programming Skills */
+/* ----------Programming Skills---------- */
 .skill {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -619,7 +635,6 @@ footer p{
     color: #ff9101;
 }
 
-/* Progress Bar Styles */
 .progress-bar {
     width: 100%;
     height: 10px;
@@ -635,12 +650,11 @@ footer p{
     animation: grow 2s forwards;
 }
 
-/* Individual Skill Proficiency Levels */
 .python { width: 75%; }
 .cpp { width: 70%; }
 .cprog { width: 75%; }
 .html { width: 75%; }
-.css { width: 70%; }
+.css { width: 50%; }
 
 .python { animation-delay: 0.5s; }
 .cpp { animation-delay: 0.7s; }
@@ -803,53 +817,43 @@ footer p{
     }
 }
 
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .skill,
-    .tool,
-    .framework,
-    .database {
-        width: 80%; /* Adjust to take up more width on smaller screens */
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-description {
-        font-size: 1rem;
-    }
-}
-
-/* For mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .skills-section {
         padding: 3rem 1rem;
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
 
     .section-description {
         font-size: 0.9rem;
     }
 
+    .skills-category{
+        margin-bottom: 1.5rem;
+    }
     .skills-category h2 {
         font-size: 1.5rem;
     }
-
+    .skills-section .container p {
+        color: white;
+        font-size: 1rem;
+    }
+    .skills-container {
+        display: flex
+    ;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
     .skill,
     .tool,
     .framework,
     .database {
-        width: 100%; /* Take full width for smaller screens */
+        width: 50%; 
         padding: 1rem;
+        display: contents;
     }
 
     .skill i {
@@ -866,6 +870,10 @@ footer p{
     .framework h3,
     .database h3 {
         font-size: 0.9rem;
+    }
+    .progress-bar {
+        width: 89%;
+        height: 4px;
     }
 }
 
@@ -886,22 +894,18 @@ section.education .mr{
     background: linear-gradient(to bottom, #eeb676, #34b652);
 }
 
-
-/* Container */
 .education .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem; /* Added padding for better alignment */
+    padding: 0 1rem; 
 }
-
-/* Heading Styling */
 .education h1 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 4rem;
     background-color: whitesmoke;
     border-radius: 20px;
-    padding: 1rem; /* Added padding for better spacing */
+    padding: 1rem; 
 }
 
 .education h2 {
@@ -911,7 +915,6 @@ section.education .mr{
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
-/* Grid Layout */
 .education-grid {
     display: flex;
     flex-wrap: wrap;
@@ -919,7 +922,7 @@ section.education .mr{
     justify-content: center;
 }
 
-/* Individual Cards */
+
 .education-card {
     background: linear-gradient(90deg, #a57bf4 0%, #d5a8dc 100%);
     padding: 2rem;
@@ -964,40 +967,18 @@ section.education .mr{
     color: #666;
     line-height: 1.6;
 }
-
-@media (max-width: 1024px) {
-    .education h1 {
-        font-size: 2rem;
-    }
-    .education-card {
-        width: 250px;
-    }
-}
-
-@media (max-width: 768px) {
-    section.education {
-        padding: 3rem 1rem;
-    }
-
-    .education h1 {
-        font-size: 1.8rem;
-        margin-bottom: 3rem;
-    }
-
-    .education-card {
-        width: 100%; 
-        max-width: 400px;
-    }
-}
-
 @media (max-width: 480px) {
     section.education {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
     }
 
-    .education h1 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
+    .education h1{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .education marquee{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
 
     .education-card {
@@ -1017,7 +998,6 @@ section.education .mr{
     }
 }
 
-/* Contact Section Styling */
 section.contact {
     padding: 4rem 2rem;
     text-align: center;
@@ -1146,46 +1126,6 @@ section.contact {
     color: #f39c12;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .contact h1 {
-        font-size: 2rem;
-    }
-    .contact-form-container {
-        flex-direction: column; 
-    }
-    .contact-form, 
-    .contact-info {
-        flex: 1 1 100%; /* Full width for each */
-    }
-}
-
-@media (max-width: 768px) {
-    section.contact {
-        padding: 3rem 1rem; 
-    }
-
-    .contact h1 {
-        font-size: 1.8rem;
-        margin-top: -30px;
-    }
-
-    .contact p {
-        font-size: 1.5rem;
-        margin-top: -10px;
-    }
-
-    .contact-form,
-    .contact-info {
-        padding: 1.5rem; /* Reduce padding */
-    }
-
-    .contact-form .btn {
-        font-size: 1rem;
-        padding: 0.6rem;
-    }
-}
-
 @media (max-width: 480px) {
     section.contact {
         padding: 2rem 1rem;
@@ -1217,9 +1157,7 @@ section.contact {
         font-size: 1.5rem;
     }
 }
-
 /* -----------------------Projects------ */
-
 .projects-section {
     padding: 40px 20px;
     text-align: center;
@@ -1231,8 +1169,7 @@ section.contact {
     color: #ffffff;
     margin-bottom: 30px;
   }
-  
-  /* Project Card Container */
+
   .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1240,8 +1177,6 @@ section.contact {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
-  /* Individual Project Card */
   .project-card {
     background: linear-gradient(90deg ,#27ae60, #0077b5);
     border: 1px solid #ddd;
@@ -1277,7 +1212,6 @@ section.contact {
     color: #ffffff;
     margin-bottom: 15px;
   }
-  
   .project-link {
     display: inline-block;
     padding: 10px 20px;
